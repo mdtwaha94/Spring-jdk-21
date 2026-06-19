@@ -43,18 +43,21 @@
 	</dependencies>
 
 	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-			<groupId>org.apache.maven.plugins</groupId>
+    <plugins>
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+        </plugin>
+
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
             <version>3.14.0</version>
             <configuration>
-              <release>21</release>
+                <release>21</release>
             </configuration>
-		</plugins>
-	</build>
+        </plugin>
+    </plugins>
+</build>
 
 </project>
