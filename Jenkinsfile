@@ -23,7 +23,7 @@ pipeline {
               mvn -version
               mvn package
               ls
-              sudo mkdir -p /opt/springboot-app
+              mkdir -p /opt/springboot-app
               cp target/demo-0.0.1-SNAPSHOT.jar /opt/springboot-app/app.jar
               ls -l /opt/springboot-app
               '''
