@@ -28,12 +28,10 @@ pipeline {
         }
         stage('Deploy') {
     steps {
-        sshagent(credentials: ['ec2-agent-key']) {
-            sh '''
-                scp target/*.jar user@13.60.31.150:/opt/springboot-app/app.jar
-            '''
-          }
-         }
-       }
+        sh '''
+            cp target/*.jar /opt/springboot-app/app.jar
+        '''
+    }
+}
     }
 }
