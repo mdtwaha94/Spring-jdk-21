@@ -23,17 +23,11 @@ pipeline {
               mvn -version
               mvn package
               ls
+              sudo mkdir -p /opt/springboot-app
+              sudo cp target/demo-0.0.1-SNAPSHOT.jar /opt/springboot-app/app.jar
+              ls -l /opt/springboot-app
               '''
             }
         }
-        stage('Deploy') {
-    steps {
-        sshagent(credentials: ['ec2-agent-key']) {
-            sh '''
-                scp target/*.jar user@13.60.31.150:/opt/springboot-app/app.jar
-            '''
-          }
-         }
-       }
     }
 }
